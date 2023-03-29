@@ -1,0 +1,26 @@
+no change     /home/znazari/anaconda3/condabin/conda
+no change     /home/znazari/anaconda3/bin/conda
+no change     /home/znazari/anaconda3/bin/conda-env
+no change     /home/znazari/anaconda3/bin/activate
+no change     /home/znazari/anaconda3/bin/deactivate
+no change     /home/znazari/anaconda3/etc/profile.d/conda.sh
+no change     /home/znazari/anaconda3/etc/fish/conf.d/conda.fish
+no change     /home/znazari/anaconda3/shell/condabin/Conda.psm1
+no change     /home/znazari/anaconda3/shell/condabin/conda-hook.ps1
+no change     /home/znazari/anaconda3/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     /home/znazari/anaconda3/etc/profile.d/conda.csh
+no change     /home/znazari/.bashrc
+No action taken.
+Traceback (most recent call last):
+  File "/home/znazari/ppmi_files/xgboost/file.py", line 16, in <module>
+    data_p=pd.DataFrame(data)
+  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.10/site-packages/pandas/core/frame.py", line 663, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 493, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 118, in arrays_to_mgr
+    index = _extract_index(arrays)
+  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 653, in _extract_index
+    raise ValueError("Per-column arrays must each be 1-dimensional")
+ValueError: Per-column arrays must each be 1-dimensional
+the job succesfully finished! hooray!
