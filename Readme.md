@@ -1,17 +1,8 @@
 
-Inside ppmi file: There are jupyter notebook for data preprocessing 
-and there ara files for diagnosis extraction list of the patients.
-Inside xgboost:  There are machine learning algorithm applied.
+Inside matrix_preparation: There are python files for extraction of data counts(last column) and quant (before the last) .
 
-├── matrix_preparation
-│   ├── 
-│   │   ├── 
-│   ├── 
-│   ├── 
-│   ├── 
-├── data_preprocessing
-│   ├── 
-│   │   ├── 
-│   ├── 
-│   ├── 
-├── machine_learning
+Inside data_preprocessing: there are jupyter notebook files for gene ID alignment and diagnosis.
+
+
+Inside machine_learning:  There are jupyter notebooks for differnt algorithm trials.
+
