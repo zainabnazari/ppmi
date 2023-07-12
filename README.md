@@ -1,0 +1,15 @@
+**Project Description** 
+
+This project is to perform Machine Learning on RNA-Seq data obtained from PPMI (Parkinson Progression Markers Initiative). The aim is to develop a predictive model to find the most important features contributing to Parkinson's disease.
+
+**Installation**
+
+To run the file you need to download the file: main_ppmi_notebook.ipynb and the 'Data' folder a directory before this file. In the Data folder, you can find all the necessary data file to be able to read inside the main jupyter notebook file.
+
+**Acknowledgment**
+
+Thanks to Serafina Di Gioia for many helpful contribution.
+
+**Contact**
+
+If you have any questions feel to contact me: nazari.zainab@gmail.com
