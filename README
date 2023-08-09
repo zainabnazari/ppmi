@@ -16,3 +16,7 @@ Thanks to Serafina Di Gioia for many helpful contribution.
 If you have any questions feel to contact me: nazari.zainab@gmail.com
 
 Note: You may ignore the file Downloading_data.ipynb which is to download automatically updated PPMI data, this file is under construction.
+
+To install R from source code in the cluster : use the script given in the following link
+https://gist.github.com/jtilly/d421b5d363cc2db860cc431a1128abc4
+
