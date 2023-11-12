@@ -3,7 +3,22 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import roc_auc_score
+'''
+Machine Learning paradigm
 
+Within a repeated stratified, (to tackle 1: the control-patient mismatch, 2: 10-fold cross-validation framework, with 3: 20 iterations), we trained multiple RF models with 100 repetitions, where each repetition used a different seed of the random generation process  to evaluate permutation feature importance measures. 
+
+Each forest was grown using 1000 trees, a sufficient value to allow the algorithm to reach a stable plateau of the out-of-bag internal error. The features selected at each split were square root of (f) with f being the overall number of genes, which is the default value for this parameter.
+
+We determined the overall feature importance ranking by averaging over the 100 repetitions. 
+
+We are training random forest for 200 * 100 = 20,000 times. In the following code each of 100 random forest will be trained with 200 different indexing for taining and testing data. In other words we use a single state of random forest for 200 different combination of taining and testing.
+
+Cosidering that each permutaion importance uses 10 times shuffling of the value and resuing the random forest, in overal random forest will be used 200,000 times.
+
+
+Note: The n_repeats parameter in the permutation_importance() function in Scikit-Learn controls how many times a feature is randomly shuffled and the model is retrained to evaluate its importance. A higher value of n_repeats will result in a more accurate estimate of feature importance, but it will also be more computationally expensive.
+'''
 # Initialize repeated stratified K-fold cross-validation
 n_splits = 10
 n_repeats = 20
