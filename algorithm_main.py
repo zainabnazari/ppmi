@@ -42,13 +42,13 @@ for repetition in range(100):
         y_train, y_test = y[train_index], y[test_index]
         
         # Initialize a Random Forest model
-        rf_model = RandomForestClassifier(n_estimators=n_estimators, max_features=max_features)
+        rf_model = RandomForestClassifier(n_estimators=n_estimators, max_features=max_features, random_state=repetition)
 
         # Fit the Random Forest model, we fit the X training sample with its associated y labels.
         rf_model.fit(X_train, y_train)
 
         # Calculate permutation feature importance
-        permutation_importance_result = permutation_importance(rf_model, X_test, y_test, n_repeats=10, random_state=repetition, scoring='roc_auc')
+        permutation_importance_result = permutation_importance(rf_model, X_test, y_test, n_repeats=10, scoring='roc_auc')
 
         # Accumulate feature importance scores
         feature_importance_scores[repetition] += permutation_importance_result.importances_mean
