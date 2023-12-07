@@ -1,4 +1,10 @@
 import numpy as np
+import pandas as pd
+import numpy as np
+import os
+import glob
+import functools
+from pathlib import Path
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.inspection import permutation_importance
@@ -18,28 +24,47 @@ Cosidering that each permutaion importance uses 10 times shuffling of the value 
 
 
 Note: The n_repeats parameter in the permutation_importance() function in Scikit-Learn controls how many times a feature is randomly shuffled and the model is retrained to evaluate its importance. A higher value of n_repeats will result in a more accurate estimate of feature importance, but it will also be more computationally expensive.
+
 '''
+# Loading the already preprocessed data:
+
+path2 = Path("/home/znazari/data") # where the output data will be saved at the end.
+
+# with all the filtered genes:
+
+ir3_rna_step_vst =  pd.read_csv(path2/'mydata_Log_CPM_filtered_bact_sex_effect_removed_RIN_covariate.txt',delimiter='\t' )
+
+diagnosis = pd.read_csv(path2/'patients_HC_PK_diagnosis.csv')
+
+# mapping diagnosis to zero and one.
+diagnosis['COHORT_DEFINITION'] = diagnosis['COHORT_DEFINITION'].map({'Healthy Control': 0, "Parkinson's Disease": 1})
+
+# X: feature matrix, y: the target variable
+
+X=ir3_rna_step_vst.T
+y=diagnosis['COHORT_DEFINITION']
+
 # Initialize repeated stratified K-fold cross-validation
-n_splits = 10
+n_splits = 10 
 n_repeats = 20
 rkf = RepeatedStratifiedKFold(n_splits=n_splits, n_repeats=n_repeats, random_state=42)
 
-# X: feature matrix, y: the target variable
+
 
 # Define the parameters for the Random Forest
 n_estimators = 1000
 max_features = int(np.sqrt(X.shape[1]))  # Square root of the total number of features
 
 # Initialize arrays to store feature importance scores
-feature_importance_scores = np.zeros((100, X.shape[1]))  # 100 repetitions, n_features
+feature_importance_scores = np.zeros((1, X.shape[1]))  # 100 repetitions, n_features
 
 # Loop through each repetition
 for repetition in range(100):
     
     # Loop through each fold
     for train_index, test_index in rkf.split(X, y):
-        X_train, X_test = X[train_index], X[test_index]
-        y_train, y_test = y[train_index], y[test_index]
+        X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+        y_train, y_test = y.iloc[train_index], y.iloc[test_index]
         
         # Initialize a Random Forest model
         rf_model = RandomForestClassifier(n_estimators=n_estimators, max_features=max_features, random_state=repetition)
