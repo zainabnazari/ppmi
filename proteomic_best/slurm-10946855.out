@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/znazari/ppmi_files/proteomic_best/parallel_best_proteomic.py", line 11, in <module>
+    X_train_dask = da.from_dask_array(X_train)
+AttributeError: module 'dask.array' has no attribute 'from_dask_array'

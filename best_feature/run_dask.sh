@@ -19,5 +19,5 @@ conda activate Zainab-env #you have to change this with your environment
 
 cd $SLURM_SUBMIT_DIR
 
-mpirun -n 6 main_dask_algorithm.py 
+mpirun -n 6 python main_dask_algorithm.py 
 

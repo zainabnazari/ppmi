@@ -9,8 +9,11 @@ from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.inspection import permutation_importance
 import numpy as np
 import os
+import time
 
 if __name__ == "__main__":
+
+    start_time = time.time()
 
     print('I am before client initialization')
 
@@ -43,7 +46,7 @@ if __name__ == "__main__":
 
     # Initialize repeated stratified K-fold cross-validation
     n_splits = 10
-    n_repeats = 20
+    n_repeats = 2
     rkf = RepeatedStratifiedKFold(n_splits=n_splits, n_repeats=n_repeats, random_state=42)
 
     # Define the parameters for the Random Forest
@@ -74,7 +77,7 @@ if __name__ == "__main__":
                 return permutation_importance_result.importances_mean
 
     # Use Dask parallelization to distribute repetitions across workers
-    repetitions = range(100)
+    repetitions = range(2)
     feature_importance_scores = dask_client.map(process_repetition, repetitions)
 
     # Compute results
@@ -92,4 +95,6 @@ if __name__ == "__main__":
         file.write("Feature Importance Ranking:\n")
         for i in sorted_feature_indices:
             file.write(f"Feature {i}: {average_feature_importance_scores[i]}\n")
-
+    end_time = time.time()  
+    execution_time = end_time - start_time
+    print(f"Execution Time: {execution_time} seconds")

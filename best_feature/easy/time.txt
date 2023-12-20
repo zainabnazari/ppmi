@@ -1,0 +1,3 @@
+I am before client initialization
+I am before client initialization
+I am before client initialization
