@@ -1,19 +1,17 @@
 Traceback (most recent call last):
-  File "/home/znazari/ppmi_files/best_feature/easy/main_dask_algorithm.py", line 25, in <module>
-Traceback (most recent call last):
-  File "/home/znazari/ppmi_files/best_feature/easy/main_dask_algorithm.py", line 25, in <module>
-    initialize(memory_limit=mem)
-  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.10/site-packages/dask_mpi/core.py", line 75, in initialize
-    initialize(memory_limit=mem)
-  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.10/site-packages/dask_mpi/core.py", line 75, in initialize
-Traceback (most recent call last):
-  File "/home/znazari/ppmi_files/best_feature/easy/main_dask_algorithm.py", line 25, in <module>
-    initialize(memory_limit=mem)
-  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.10/site-packages/dask_mpi/core.py", line 75, in initialize
+  File "hi.py", line 1, in <module>
     from mpi4py import MPI
 ImportError: libmpi.so.12: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "hi.py", line 1, in <module>
     from mpi4py import MPI
 ImportError: libmpi.so.12: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "hi.py", line 1, in <module>
+    from mpi4py import MPI
+ImportError: libmpi.so.12: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "hi.py", line 1, in <module>
     from mpi4py import MPI
 ImportError: libmpi.so.12: cannot open shared object file: No such file or directory
 --------------------------------------------------------------------------
@@ -21,9 +19,9 @@ Primary job  terminated normally, but 1 process returned
 a non-zero exit code. Per user-direction, the job has been aborted.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-mpirun detected that one or more processes exited with non-zero status, thus causing
+mpiexec detected that one or more processes exited with non-zero status, thus causing
 the job to be terminated. The first process to do so was:
 
-  Process name: [[147,1],0]
+  Process name: [[64098,1],3]
   Exit code:    1
 --------------------------------------------------------------------------

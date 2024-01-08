@@ -1,0 +1,13 @@
+name: Zainab-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8  # or any version you prefer
+  - dask-mpi
+  - dask
+  - joblib
+  - scikit-learn
+  - pandas
+  - numpy
+

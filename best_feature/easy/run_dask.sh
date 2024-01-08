@@ -8,7 +8,7 @@
 
 
 module purge
-module load gnu11 openmpi3  
+module load  gnu8/8.3.0  openmpi3/3.1.4 
 
 
 source /home/znazari/.bashrc

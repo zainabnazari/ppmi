@@ -1,0 +1,73 @@
+mpiexec (OpenRTE) 3.1.4
+
+Report bugs to http://www.open-mpi.org/community/help/
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[44366,1],3] (PID 40995)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+2023-12-31 13:25:55,014 - distributed.http.proxy - INFO - To route to workers diagnostics web server please install jupyter-server-proxy: python -m pip install jupyter-server-proxy
+2023-12-31 13:25:55,057 - distributed.scheduler - INFO - State start
+2023-12-31 13:25:55,060 - distributed.scheduler - INFO -   Scheduler at:     tcp://10.1.10.9:37871
+2023-12-31 13:25:55,060 - distributed.scheduler - INFO -   dashboard at:  http://10.1.10.9:8787/status
+2023-12-31 13:25:55,063 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-kyyrob12', purging
+2023-12-31 13:25:55,064 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-kw4ty3eq', purging
+2023-12-31 13:25:55,073 - distributed.worker - INFO -       Start worker at:     tcp://10.1.10.10:46196
+2023-12-31 13:25:55,073 - distributed.worker - INFO -          Listening to:     tcp://10.1.10.10:46196
+2023-12-31 13:25:55,073 - distributed.worker - INFO -           Worker name:                          3
+2023-12-31 13:25:55,073 - distributed.worker - INFO -          dashboard at:           10.1.10.10:44641
+2023-12-31 13:25:55,073 - distributed.worker - INFO - Waiting to connect to:      tcp://10.1.10.9:37871
+2023-12-31 13:25:55,073 - distributed.worker - INFO - -------------------------------------------------
+2023-12-31 13:25:55,073 - distributed.worker - INFO -               Threads:                          1
+2023-12-31 13:25:55,074 - distributed.worker - INFO -                Memory:                   0.98 GiB
+2023-12-31 13:25:55,074 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-6knd5zt8
+2023-12-31 13:25:55,074 - distributed.worker - INFO - -------------------------------------------------
+2023-12-31 13:25:55,074 - distributed.worker - INFO -       Start worker at:     tcp://10.1.10.10:44462
+2023-12-31 13:25:55,075 - distributed.worker - INFO -          Listening to:     tcp://10.1.10.10:44462
+2023-12-31 13:25:55,075 - distributed.worker - INFO -           Worker name:                          2
+2023-12-31 13:25:55,075 - distributed.worker - INFO -          dashboard at:           10.1.10.10:32841
+2023-12-31 13:25:55,075 - distributed.worker - INFO - Waiting to connect to:      tcp://10.1.10.9:37871
+2023-12-31 13:25:55,075 - distributed.worker - INFO - -------------------------------------------------
+2023-12-31 13:25:55,075 - distributed.worker - INFO -               Threads:                          1
+2023-12-31 13:25:55,075 - distributed.worker - INFO -                Memory:                   0.98 GiB
+2023-12-31 13:25:55,075 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-qqmisr0b
+2023-12-31 13:25:55,075 - distributed.worker - INFO - -------------------------------------------------
+2023-12-31 13:25:55,503 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://10.1.10.10:44462', name: 2, status: init, memory: 0, processing: 0>
+2023-12-31 13:25:55,507 - distributed.scheduler - INFO - Starting worker compute stream, tcp://10.1.10.10:44462
+2023-12-31 13:25:55,507 - distributed.core - INFO - Starting established connection to tcp://10.1.10.10:47408
+2023-12-31 13:25:55,507 - distributed.worker - INFO -         Registered to:      tcp://10.1.10.9:37871
+2023-12-31 13:25:55,507 - distributed.worker - INFO - -------------------------------------------------
+2023-12-31 13:25:55,508 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://10.1.10.10:46196', name: 3, status: init, memory: 0, processing: 0>
+2023-12-31 13:25:55,508 - distributed.core - INFO - Starting established connection to tcp://10.1.10.9:37871
+2023-12-31 13:25:55,509 - distributed.scheduler - INFO - Starting worker compute stream, tcp://10.1.10.10:46196
+2023-12-31 13:25:55,509 - distributed.core - INFO - Starting established connection to tcp://10.1.10.10:47406
+2023-12-31 13:25:55,510 - distributed.worker - INFO -         Registered to:      tcp://10.1.10.9:37871
+2023-12-31 13:25:55,510 - distributed.worker - INFO - -------------------------------------------------
+2023-12-31 13:25:55,511 - distributed.core - INFO - Starting established connection to tcp://10.1.10.9:37871
+2023-12-31 13:25:55,636 - distributed.scheduler - INFO - Receive client connection: Client-be86b6d2-a7d7-11ee-9008-d06726cd5682
+2023-12-31 13:25:55,637 - distributed.core - INFO - Starting established connection to tcp://10.1.10.9:46138
+[cn10-09:36855] 3 more processes have sent help message help-opal-runtime.txt / opal_init:warn-fork
+[cn10-09:36855] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+slurmstepd: error: *** JOB 11009797 ON cn10-09 CANCELLED AT 2023-12-31T14:08:03 DUE TO TIME LIMIT ***
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[44366,0],0] on node cn10-09
+  Remote daemon: [[44366,0],2] on node cn10-11
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------

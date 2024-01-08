@@ -1,0 +1,41 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"python/3.8.5"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "python/3.8.5"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Traceback (most recent call last):
+  File "sample.py", line 17, in <module>
+    initialize(memory_limit=mem)
+  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.8/site-packages/dask_mpi/core.py", line 75, in initialize
+    from mpi4py import MPI
+ImportError: libmpi.so.12: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "sample.py", line 17, in <module>
+    initialize(memory_limit=mem)
+  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.8/site-packages/dask_mpi/core.py", line 75, in initialize
+    from mpi4py import MPI
+ImportError: libmpi.so.12: cannot open shared object file: No such file or directory
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "sample.py", line 17, in <module>
+    initialize(memory_limit=mem)
+  File "/home/znazari/anaconda3/envs/Zainab-env/lib/python3.8/site-packages/dask_mpi/core.py", line 75, in initialize
+    from mpi4py import MPI
+ImportError: libmpi.so.12: cannot open shared object file: No such file or directory
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[34150,1],1]
+  Exit code:    1
+--------------------------------------------------------------------------

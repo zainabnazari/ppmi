@@ -10,7 +10,7 @@ from sklearn.inspection import permutation_importance
 import numpy as np
 import os
 import time
-
+import dask as dd
 if __name__ == "__main__":
 
     start_time = time.time()
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     feature_importance_scores = dask_client.map(process_repetition, repetitions)
 
     # Compute results
-    feature_importance_scores = dask.compute(*feature_importance_scores)
+    feature_importance_scores = dd.compute(*feature_importance_scores)
 
     # Average the feature importance scores across repetitions
     average_feature_importance_scores = np.mean(feature_importance_scores, axis=0)
