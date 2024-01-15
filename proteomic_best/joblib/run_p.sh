@@ -16,5 +16,5 @@ conda activate Zainab-env # my environment
 
 cd $SLURM_SUBMIT_DIR
 
-python  best_proteomic.py > result.txt
+python  best_proteomic.py > result_present.txt
 

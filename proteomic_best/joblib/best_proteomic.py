@@ -116,17 +116,75 @@ X_train_selected = selector.transform(X_train)
 X_test_selected = selector.transform(X_test)
 
 # Initialize and train the XGBoost model on the selected features
-xgb_model = XGBClassifier()
-xgb_model.fit(X_train_selected, y_train)
+
+
+# Repeat the XGBoost model with stratified cross-validation 100 times
+num_repeats = 100
+auc_scores = []
+
+for i in range(num_repeats):
+    # Split the data into training and testing sets
+    X_train1, X_test1, y_train1, y_test1 = train_test_split(X_train_selected, y_train, test_size=0.3, random_state=i)
+
+    # Initialize and train the XGBoost model on the selected features
+    xgb_model = XGBClassifier()
+    xgb_model.fit(X_train1, y_train1)
+
+    # Make predictions on the testing set
+    y_pred_proba = xgb_model.predict_proba(X_test1)[:, 1]
+
+    # Calculate AU-ROC score
+    au_roc_score = roc_auc_score(y_test1, y_pred_proba)
+    auc_scores.append(au_roc_score)
+
+# Calculate and print the average AU-ROC score over all iterations
+average_auc_score = sum(auc_scores) / num_repeats
+print(f'Average AU-ROC Score over {num_repeats} iterations: {average_auc_score}')
+
+
+
+#xgb_model = XGBClassifier()
+#xgb_model.fit(X_train_selected, y_train)
 
 # Make predictions on the testing set
-y_pred_proba = xgb_model.predict_proba(X_test_selected)[:, 1]
+#y_pred_proba = xgb_model.predict_proba(X_test_selected)[:, 1]
 
 # Calculate AU-ROC score
-au_roc_score = roc_auc_score(y_test, y_pred_proba)
+#au_roc_score = roc_auc_score(y_test, y_pred_proba)
+
+
+
+#################
+
+
+# Repeat the XGBoost model 
+num_repeats = 100
+auc_scores = []
+
+for i in range(num_repeats):
+    # Split the data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.3, random_state=i)
+
+    # Initialize and train the XGBoost model on the selected features
+    xgb_model = XGBClassifier()
+    xgb_model.fit(X_train, y_train)
+
+    # Make predictions on the testing set
+    y_pred_proba = xgb_model.predict_proba(X_test)[:, 1]
+
+    # Calculate AU-ROC score
+    au_roc_score = roc_auc_score(y_test, y_pred_proba)
+    auc_scores.append(au_roc_score)
+
+    # Print the AU-ROC score for each iteration
+    print(f'Iteration {i + 1}: AU-ROC Score: {au_roc_score}')
+
+# Calculate and print the average AU-ROC score over all iterations
+average_auc_score = sum(auc_scores) / num_repeats
+print(f'Average AU-ROC Score over {num_repeats} iterations: {average_auc_score}')
 end_time=time.time()
 elapsed_time=end_time-start_time
 # Print the AU-ROC score
-print(f'AU-ROC Score: {au_roc_score}')
 print(f'elapsed time: {elapsed_time}')
-
+print("******************")
+print(X_train_selected)
