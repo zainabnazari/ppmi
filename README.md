@@ -28,7 +28,7 @@ In the file "proteomic-ML.ipynb" you can find the code with predictive model usi
 
 In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
 
-## - Include/ folder
+## - draft/ folder
 
 Please ignore it.
 
