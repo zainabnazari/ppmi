@@ -28,6 +28,11 @@ In the file "proteomic-ML.ipynb" you can find the code with predictive model usi
 
 In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
 
+## - RNA Sequencing  
+
+We consider latest available data for RNA Sequencing Feature Counts/TPM (IR3/B38/Phases 1-2) version 2021-04-02
+We make a table of Ensembl Gene IDs versus Patient numbers. In the file rna_seq_table.ipynb 
+
 ## - draft/ folder
 
 Please ignore it.
@@ -35,8 +40,5 @@ Please ignore it.
 **Contact**
 
 If you have any questions/suggestion or want to contribute feel to contact me: z.nazari@ebri.it
-
-## References
-- [**Parkinson’s Progression Markers Initiative (PPMI)**](https://www.ppmi-info.org/)
 
 Last update : 2024-01-29
