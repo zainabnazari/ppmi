@@ -31,7 +31,7 @@ In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
 ## - RNA Sequencing  
 
 We consider latest available data for RNA Sequencing Feature Counts/TPM (IR3/B38/Phases 1-2) version 2021-04-02
-We make a table of Ensembl Gene IDs versus Patient numbers. In the file rna_seq_table.ipynb 
+We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_table.ipynb with 58690 genes and 1530 individuals. 
 
 ## - draft/ folder
 
