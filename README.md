@@ -1,4 +1,5 @@
-**Project Description** 
+# <span style="color:#8B4513;"> **Project Description**
+</span>
 
 This project involves applying Machine Learning techniques to analyze data provided by the Parkinson Progression Markers Initiative (PPMI) example (*omics data, motor scores, and brain imaging, etc). The primary objectives are to create a predictive model for enhanced diagnosis as well as to gain a deeper understanding of the heterogeneous nature of individuals affected by Parkinson's diseasein progressive stages of their disease trajectory with variety of machine learning models, including supervised, unsupervised, and neural network models.
 
