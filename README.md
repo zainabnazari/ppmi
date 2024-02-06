@@ -32,8 +32,17 @@ In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
 ## - RNA Sequencing  
 
 We consider latest available data for RNA Sequencing Feature Counts/TPM (IR3/B38/Phases 1-2) version 2021-04-02
-We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_table.ipynb with 58690 genes and 1530 individuals. 
+We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_table.ipynb with 58780 genes and 1530 individuals. 
 
+### Preprocessing Part I
+
+- We keep only individuals with diagnosis of Health Control or Parkinson's Disease.
+- We remove patients that have these gene mutations : SNCA, GBA, LRRK2, and taking dopaminergic drugs.
+- We remove the duplicated gene IDs which are those that carry ensembl genes with suffix _PAR_Y and their X transcripts.
+-  We only keep genes that are either in the 19393 protein coding gene list or in 5874 long intergenic non-coding RNAs (lincRNAs) list that we obtained from the official HGNC repository (date: 31-Jan-2024).
+- We filter out genes with low expression levels, retaining only those genes that exhibit more than five counts in a minimum of 10% of the individuals. 
+
+The preprocessing file can be found in preprocessing_part1.ipynb.
 ## - draft/ folder
 
 Please ignore it.
