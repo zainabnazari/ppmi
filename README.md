@@ -43,7 +43,7 @@ We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_t
 - We filter out genes with low expression levels, retaining only those genes that exhibit more than five counts in a minimum of 10% of the individuals. 
 
 The preprocessing file can be found in preprocessing_part1.ipynb.
-## - draft/ folder
+## - Draft/ 
 
 Please ignore it.
 
