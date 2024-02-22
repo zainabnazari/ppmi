@@ -51,9 +51,9 @@ We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_t
 - We filter and normalize gene expression data.
 - We remove batch effects using clinical center, sex, and RIN as covariates.
 
-The preprocessing file can be found in preprocessing_part2.ipynb
+The preprocessing file can be found in preprocessing_part2.R
 
-## - Draft/ 
+## - Draft
 
 Please ignore it.
 
