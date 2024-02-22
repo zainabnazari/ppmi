@@ -59,3 +59,4 @@ logCPM_filtered_batch_effect_removed <- removeBatchEffect(logCPM_filtered, batch
 # Write the resulting matrix to a file
 write.table(logCPM_filtered_batch_effect_removed, "mydata_TMM_Norm_Log2_CPM_filtered.txt", sep = "\t", row.names = TRUE, col.names = TRUE)
 
+Last update : 2024-02-22

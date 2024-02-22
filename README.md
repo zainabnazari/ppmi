@@ -42,7 +42,17 @@ We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_t
 -  We only keep genes that are either in the 19393 protein coding gene list or in 5874 long intergenic non-coding RNAs (lincRNAs) list that we obtained from the official HGNC repository (date: 31-Jan-2024).
 - We filter out genes with low expression levels, retaining only those genes that exhibit more than five counts in a minimum of 10% of the individuals. 
 
-The preprocessing file can be found in preprocessing_part1.ipynb.
+
+### Preprocessing Part II
+
+- We create factors for diagnosis, sex, clinical center, and RIN from batch factor information.
+- We perform differential gene expression analysis using the limma package.
+- We normalize factors, compute log2 counts per million, and create a design matrix with sex correction.
+- We filter and normalize gene expression data.
+- We remove batch effects using clinical center, sex, and RIN as covariates.
+
+The preprocessing file can be found in preprocessing_part2.ipynb
+
 ## - Draft/ 
 
 Please ignore it.
@@ -51,4 +61,4 @@ Please ignore it.
 
 If you have any questions/suggestion or want to contribute feel to contact me: z.nazari@ebri.it
 
-Last update : 2024-02-06
+Last update : 2024-02-22
