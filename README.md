@@ -8,32 +8,10 @@ This project involves applying Machine Learning techniques to analyze data provi
  <span style="color:#8B4513;">EBRI – European Brain Research Institute Rita Levi-Montalcini | MHPC - Master in High Performance Computing</span>
  
 
-**Installation**
-
-- In the file conda_list.txt you acn find all the packeges installed using conda.
-
-
 # Table of Contents
 
 ## - Excluding Pateints
 In the file "excluded_patients.ipynb" we extract patients that are either using dopaminergic medication or having mutation genes.
-
-
-## - Proteomic CSF Machine Learning
-
-### - Proteomic CSF Table
-
-In the file "proteomic-table.ipynb" you can find code on how to make the table which contains the proteomic csf genes with patients and their diagnosis
-
-In the file "proteomic-ML.ipynb" you can find the code with predictive model using xgboost for dianosis of PD vs Control.
-
-## - Motor Score 
-
-In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
-
-## - UPSIT
-
-University of Pennsylvania Smell Identification Test, in the file UPSIT.ipynb
 
 ## - RNA Sequencing  
 
@@ -59,9 +37,30 @@ We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_t
 
 The preprocessing file can be found in preprocessing_part2.R
 
+## - Proteomic CSF Machine Learning
+
+### - Proteomic CSF Table
+
+In the file "proteomic-table.ipynb" you can find code on how to make the table which contains the proteomic csf genes with patients and their diagnosis
+
+In the file "proteomic-ML.ipynb" you can find the code with predictive model using xgboost for dianosis of PD vs Control.
+
+## - Motor Score 
+
+In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
+
+## - UPSIT
+
+University of Pennsylvania Smell Identification Test, in the file UPSIT.ipynb
+
+
 ## - Draft
 
 Please ignore it.
+
+**Installation**
+
+- In the file conda_list.txt you acn find all the packeges installed using conda.
 
 **Contact**
 
