@@ -17,11 +17,13 @@ This project involves applying Machine Learning techniques to analyze data provi
 
 ## - Excluding Pateints
 In the file "excluded_patients.ipynb" we extract patients that are either using dopaminergic medication or having mutation genes.
-## - Proteomic CSF Table
 
-In the file "proteomic-table.ipynb" you can find code on how to make the table which contains the proteomic csf genes with patients and their diagnosis
 
 ## - Proteomic CSF Machine Learning
+
+### - Proteomic CSF Table
+
+In the file "proteomic-table.ipynb" you can find code on how to make the table which contains the proteomic csf genes with patients and their diagnosis
 
 In the file "proteomic-ML.ipynb" you can find the code with predictive model using xgboost for dianosis of PD vs Control.
 
