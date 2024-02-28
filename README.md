@@ -29,6 +29,10 @@ In the file "proteomic-ML.ipynb" you can find the code with predictive model usi
 
 In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
 
+## - UPSIT
+
+University of Pennsylvania Smell Identification Test, in the file UPSIT.ipynb
+
 ## - RNA Sequencing  
 
 We consider latest available data for RNA Sequencing Feature Counts/TPM (IR3/B38/Phases 1-2) version 2021-04-02
@@ -61,4 +65,4 @@ Please ignore it.
 
 If you have any questions/suggestion or want to contribute feel to contact me: z.nazari@ebri.it
 
-Last update : 2024-02-22
+Last update : 2024-02-28
