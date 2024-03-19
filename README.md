@@ -13,7 +13,7 @@ This project involves applying Machine Learning techniques to analyze data provi
 ## - Excluding Pateints
 In the file "excluded_patients.ipynb" we extract patients that are either using dopaminergic medication or having mutation genes.
 
-## - RNA Sequencing  
+## - RNA Sequencing /
 
 We consider latest available data for RNA Sequencing Feature Counts/TPM (IR3/B38/Phases 1-2) version 2021-04-02
 We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_table.ipynb with 58780 genes and 1530 individuals. 
@@ -37,9 +37,8 @@ We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_t
 
 The preprocessing file can be found in preprocessing_part2.R
 
-## - Proteomic CSF Machine Learning
+## - Proteomics/
 
-### - Proteomic CSF Table
 
 In the file "proteomic-table.ipynb" you can find code on how to make the table which contains the proteomic csf genes with patients and their diagnosis
 
@@ -52,6 +51,10 @@ In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
 ## - UPSIT
 
 University of Pennsylvania Smell Identification Test, in the file UPSIT.ipynb
+
+## - External_Data/
+
+Some external data that is needed for this study.
 
 
 ## - Draft
