@@ -37,6 +37,10 @@ We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_t
 
 The preprocessing file can be found in preprocessing_part2.R
 
+### ML AdaBoost
+
+The code performs machine learning analysis using AdaBoost algorithm on RNA-Seq dataset and evaluates the performance of multiple models across multiple trials.
+
 ## - Proteomics/
 
 
@@ -57,7 +61,7 @@ University of Pennsylvania Smell Identification Test, in the file UPSIT.ipynb
 Some external data that is needed for this study.
 
 
-## - Draft
+## - Draft/
 
 Please ignore it.
 
