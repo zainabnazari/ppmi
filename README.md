@@ -39,7 +39,7 @@ The preprocessing file can be found in preprocessing_part2.R, I am grateful to I
 
 ### ML AdaBoost
 
-The code performs machine learning analysis using AdaBoost algorithm on RNA-Seq dataset and evaluates the performance of multiple models across multiple trials. I am grateful to Ivan Arisi for sharing valuable information with me regarding this aspect.
+The code performs machine learning analysis using AdaBoost algorithm on RNA-Seq dataset and evaluates the performance of multiple models across multiple trials.
 
 ## - Proteomics/
 
@@ -72,5 +72,9 @@ Please ignore it.
 **Contact**
 
 If you have any questions/suggestion or want to contribute feel to contact me: z.nazari@ebri.it
+
+**Acknowledgement**
+
+I am grateful to Ivan Arisi for sharing valuable information with me regarding this project and particularly for the prepresossesing STEP II as well as ML learning algorithm with AdaBoost.
 
 Last update : 2024-03-21
