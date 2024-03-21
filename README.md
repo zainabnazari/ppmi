@@ -35,11 +35,11 @@ We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_t
 - We filter and normalize gene expression data.
 - We remove batch effects using clinical center, sex, and RIN as covariates.
 
-The preprocessing file can be found in preprocessing_part2.R
+The preprocessing file can be found in preprocessing_part2.R, I am grateful to Ivan Arisi for sharing valuable information with me regarding this aspect.
 
 ### ML AdaBoost
 
-The code performs machine learning analysis using AdaBoost algorithm on RNA-Seq dataset and evaluates the performance of multiple models across multiple trials.
+The code performs machine learning analysis using AdaBoost algorithm on RNA-Seq dataset and evaluates the performance of multiple models across multiple trials. I am grateful to Ivan Arisi for sharing valuable information with me regarding this aspect.
 
 ## - Proteomics/
 
@@ -73,4 +73,4 @@ Please ignore it.
 
 If you have any questions/suggestion or want to contribute feel to contact me: z.nazari@ebri.it
 
-Last update : 2024-02-28
+Last update : 2024-03-21
