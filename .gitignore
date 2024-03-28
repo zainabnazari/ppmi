@@ -1,6 +1,4 @@
 *.csv
 *.out
-
-
-#files to keep:
+*.ipynb_checkpoints
 
