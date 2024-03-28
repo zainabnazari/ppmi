@@ -56,6 +56,10 @@ In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
 
 University of Pennsylvania Smell Identification Test, in the file UPSIT.ipynb
 
+## - Plots
+
+Distribution of Participants Diagnosis, Ages and  Across Different Visits in the file: plots.ipynb
+
 ## - External_Data/
 
 Some external data that is needed for this study.
@@ -77,4 +81,4 @@ If you have any questions/suggestion or want to contribute feel to contact me: z
 
 I am grateful to Ivan Arisi for sharing valuable information with me regarding this project and particularly for the prepresossesing STEP II as well as ML learning algorithm with AdaBoost.
 
-Last update : 2024-03-21
+Last update : 2024-03-28
