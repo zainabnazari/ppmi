@@ -41,6 +41,9 @@ The preprocessing file can be found in preprocessing_part2.R, I am grateful to I
 
 The code performs machine learning analysis using AdaBoost algorithm on RNA-Seq dataset and evaluates the performance of multiple models across multiple trials.
 
+#### ML with best 148 genes and using XGBoost and CatBoost:
+clearly Catboost outperfom in the computaion of AUC with cross validation.
+
 ## - Proteomics/
 
 
