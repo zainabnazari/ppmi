@@ -57,7 +57,7 @@ In the file "motor_score.ipynb" you can find a ML test for UPDRS total score.
 
 ## - UPSIT
 
-University of Pennsylvania Smell Identification Test, in the file UPSIT.ipynb
+University of Pennsylvania Smell Identification Test, in the file for ppmi cohort in ppmi_UPSIT.ipynb and pdbp cohort in pdbp_UPSIT.ipynb
 
 ## - Plots
 
