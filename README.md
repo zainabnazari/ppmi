@@ -44,6 +44,9 @@ The code performs machine learning analysis using AdaBoost algorithm on RNA-Seq 
 #### ML with best 148 genes and using XGBoost and CatBoost:
 clearly Catboost outperfom in the computaion of AUC with cross validation.
 
+## RNA-Seq data from PDBP with diagnosis 
+We add the table where we extract the RNA-Seq of PDBP cohort from AMP-PD cohort.
+
 ## - Proteomics/
 
 
