@@ -46,6 +46,7 @@ clearly Catboost outperfom in the computaion of AUC with cross validation.
 
 ## RNA-Seq data from PDBP with diagnosis 
 We add the table where we extract the RNA-Seq of PDBP cohort from AMP-PD cohort.
+We only keep those individuals with parents having no PD so to keep more data for analysis. 
 
 ## - Proteomics/
 
@@ -87,4 +88,4 @@ If you have any questions/suggestion or want to contribute feel to contact me: z
 
 I am grateful to Ivan Arisi for sharing valuable information with me regarding this project and particularly for the prepresossesing STEP II as well as ML learning algorithm with AdaBoost.
 
-Last update : 2024-05-20
+Last update : 2024-05-22
