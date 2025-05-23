@@ -13,7 +13,7 @@ This project involves applying Machine Learning techniques to analyze data provi
 ## - Excluding Pateints
 In the file "excluded_patients.ipynb" we extract patients that are either using dopaminergic medication or having mutation genes.
 
-## - RNA Sequencing /
+## - RNA Sequencing 
 
 We consider latest available data for RNA Sequencing Feature Counts/TPM (IR3/B38/Phases 1-2) version 2021-04-02
 We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_table.ipynb with 58780 genes and 1530 individuals. 
@@ -48,7 +48,7 @@ clearly Catboost outperfom in the computaion of AUC with cross validation.
 We add the table where we extract the RNA-Seq of PDBP cohort from AMP-PD cohort.
 We only keep those individuals with parents having no PD so to keep more data for analysis. 
 
-## - Proteomics/
+## - Proteomics
 
 
 In the file "proteomic-table.ipynb" you can find code on how to make the table which contains the proteomic csf genes with patients and their diagnosis
@@ -67,7 +67,7 @@ University of Pennsylvania Smell Identification Test, in the file for ppmi cohor
 
 Distribution of Participants Diagnosis, Ages and  Across Different Visits in the file: plots.ipynb
 
-## - External_Data/
+## - External_Data
 
 Some external data that is needed for this study.
 
