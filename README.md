@@ -71,11 +71,6 @@ Distribution of Participants Diagnosis, Ages and  Across Different Visits in the
 
 Some external data that is needed for this study.
 
-
-## - Draft/
-
-Please ignore it.
-
 **Installation**
 
 - In the file conda_list.txt you acn find all the packeges installed using conda.
