@@ -20,20 +20,20 @@ We make a table of Ensembl Gene IDs versus Patient numbers in the file rna_seq_t
 
 ### Preprocessing Part I
 
-- We keep only individuals with diagnosis of Health Control or Parkinson's Disease.
-- We remove patients that have these gene mutations : SNCA, GBA, LRRK2, and taking dopaminergic drugs.
-- We remove the duplicated gene IDs which are those that carry ensembl genes with suffix _PAR_Y and their X transcripts.
--  We only keep genes that are either in the 19393 protein coding gene list or in 5874 long intergenic non-coding RNAs (lincRNAs) list that we obtained from the official HGNC repository (date: 31-Jan-2024).
-- We filter out genes with low expression levels, retaining only those genes that exhibit more than five counts in a minimum of 10% of the individuals. 
+- Keep only individuals with diagnosis of Health Control or Parkinson's Disease.
+- Remove patients that have these gene mutations : SNCA, GBA, LRRK2, and taking dopaminergic drugs.
+- Remove the duplicated gene IDs which are those that carry ensembl genes with suffix _PAR_Y and their X transcripts.
+-  Only keep genes that are either in the 19393 protein coding gene list or in 5874 long intergenic non-coding RNAs (lincRNAs) list that we obtained from the official HGNC repository (date: 31-Jan-2024).
+- Filter out genes with low expression levels, retaining only those genes that exhibit more than five counts in a minimum of 10% of the individuals. 
 
 
 ### Preprocessing Part II
 
-- We create factors for diagnosis, sex, clinical center, and RIN from batch factor information.
-- We perform differential gene expression analysis using the limma package.
-- We normalize factors, compute log2 counts per million, and create a design matrix with sex correction.
-- We filter and normalize gene expression data.
-- We remove batch effects using clinical center, sex, and RIN as covariates.
+- Create factors for diagnosis, sex, clinical center, and RIN from batch factor information.
+- Perform differential gene expression analysis using the limma package.
+- Normalize factors, compute log2 counts per million, and create a design matrix with sex correction.
+- Filter and normalize gene expression data.
+- Remove batch effects using clinical center, sex, and RIN as covariates.
 
 The preprocessing file can be found in preprocessing_part2.R, I am grateful to Ivan Arisi for sharing valuable information with me regarding this aspect.
 
